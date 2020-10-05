@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public class EnemyProjectile : MonoBehaviour
 {
-
     private Rigidbody rig;
     public static float speed = 0.1f;
     public string type;
@@ -17,7 +16,6 @@ public class Projectile : MonoBehaviour
         StartCoroutine(die());
     }
 
-    // Update is called once per frame
     void Update()
     {
         transform.GetChild(0).Rotate(new Vector3(rotation,rotation,rotation), Space.Self);
@@ -34,17 +32,4 @@ public class Projectile : MonoBehaviour
         Destroy(gameObject);
     }
 
-    void OnTriggerEnter(Collider coll)
-    {
-        if(coll.tag == "Enemy"){
-            if(coll.GetComponent<EnemyProjectile>().type.Equals(type)){
-                Destroy(coll.gameObject);
-                Destroy(gameObject);
-            }else{
-                Destroy(gameObject);
-            }
-        }else if(coll.tag == "Board"){
-
-        }
-    }
 }

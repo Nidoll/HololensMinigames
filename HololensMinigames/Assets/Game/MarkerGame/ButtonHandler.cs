@@ -10,11 +10,17 @@ public class ButtonHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this.gameObject.GetComponent<VirtualButtonBehaviour>().RegisterOnButtonPressed(OnButtonPressed);
+        gameObject.GetComponent<VirtualButtonBehaviour>().RegisterOnButtonPressed(OnButtonPressed);
+        gameObject.GetComponent<VirtualButtonBehaviour>().RegisterOnButtonReleased(OnButtonReleased);
     }
 
     public void OnButtonPressed(VirtualButtonBehaviour vb)
     {
         turret.fire();
+    }
+
+    public void OnButtonReleased(VirtualButtonBehaviour vb)
+    {
+
     }
 }

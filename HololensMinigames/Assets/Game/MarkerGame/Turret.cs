@@ -9,8 +9,8 @@ public class Turret : MonoBehaviour
     bool shooting = false;
     public GameObject projectile;
     public GameObject projectileOriginO;
-    private Vector3 projectileOrigin;
     public static float delay = 1f;
+    private GameObject projec;
 
     // Start is called before the first frame update
     void Start()
@@ -21,23 +21,14 @@ public class Turret : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(gameStart && !shooting){
-           StartCoroutine(shoot());
-           shooting = true;
-        }
-        projectileOrigin = projectileOriginO.transform.position;
-    }
-
-    IEnumerator shoot()
-    {
-        while(true){
-            Instantiate(projectile, projectileOrigin, projectileOriginO.transform.rotation);
-            yield return new WaitForSeconds(delay);
+        if(Input.GetKeyDown(KeyCode.E)){
+            fire();
         }
     }
 
     public void fire()
     {
-        Instantiate(projectile, projectileOrigin, projectileOriginO.transform.localRotation);
+        projec = Instantiate(projectile, projectileOriginO.transform.position, projectileOriginO.transform.rotation);
+        projec.transform.eulerAngles = new Vector3(0, projec.transform.eulerAngles.y, 0);
     }
 }
