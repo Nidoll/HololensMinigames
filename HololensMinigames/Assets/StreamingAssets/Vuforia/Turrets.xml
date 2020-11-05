@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="MarkerGameBoard" size="0.120000 0.120000" />
+    <ImageTarget name="MarkerSphere" size="0.120000 0.120000" />
+    <ImageTarget name="MarkerPyramid" size="0.120000 0.120000" />
+    <ImageTarget name="MarkerCube" size="0.120000 0.120000" />
     <ImageTarget name="Turret4" size="0.120000 0.120000" />
     <ImageTarget name="Turret3" size="0.120000 0.120000" />
     <ImageTarget name="Turret2" size="0.120000 0.120000" />

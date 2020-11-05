@@ -119,7 +119,7 @@ MonoBehaviour:
   profiles:
   - Target: {fileID: 3717931619960282681}
     Themes:
-    - {fileID: 11400000, guid: 2dde7ed03513b9a4e841226cf9dfc33d, type: 2}
+    - {fileID: 11400000, guid: 613a30ec511a7f54b85a727050b92476, type: 2}
   OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -135,6 +135,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   Events: []
+  resetOnDestroy: 0
   enabledOnStart: 1
 --- !u!65 &6875358759622404639
 BoxCollider:

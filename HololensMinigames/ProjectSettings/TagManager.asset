@@ -10,6 +10,7 @@ TagManager:
   - pipeEnd
   - RedStone
   - Enemy
+  - Turret
   layers:
   - Default
   - TransparentFX
